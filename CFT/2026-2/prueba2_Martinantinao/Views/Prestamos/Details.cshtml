@@ -1,0 +1,11 @@
+@model prueba2_Martinantinao.Models.PrestamoEquipo
+
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalle del préstamo</h1>
+<partial name="_ResumenPrestamo" model="Model" />
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

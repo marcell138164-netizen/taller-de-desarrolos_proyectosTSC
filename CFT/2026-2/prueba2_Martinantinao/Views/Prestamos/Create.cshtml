@@ -1,0 +1,47 @@
+@model prueba2_Martinantinao.Models.PrestamoEquipo
+
+@{
+    ViewData["Title"] = "Nuevo préstamo";
+}
+
+<h1>Nuevo préstamo</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Solicitante" class="form-label"></label>
+        <input asp-for="Solicitante" class="form-control" />
+        <span asp-validation-for="Solicitante" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Equipo" class="form-label"></label>
+        <input asp-for="Equipo" class="form-control" />
+        <span asp-validation-for="Equipo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FechaPrestamo" class="form-label"></label>
+        <input asp-for="FechaPrestamo" class="form-control" />
+        <span asp-validation-for="FechaPrestamo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Dias" class="form-label"></label>
+        <input asp-for="Dias" class="form-control" />
+        <span asp-validation-for="Dias" class="text-danger"></span>
+    </div>
+
+    <div class="form-check mb-3">
+        <input asp-for="Devuelto" class="form-check-input" />
+        <label asp-for="Devuelto" class="form-check-label"></label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

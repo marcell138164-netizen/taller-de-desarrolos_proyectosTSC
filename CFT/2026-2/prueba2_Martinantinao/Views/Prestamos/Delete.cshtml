@@ -1,0 +1,16 @@
+@model prueba2_Martinantinao.Models.PrestamoEquipo
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar préstamo</h1>
+<div class="alert alert-warning">¿Está seguro de eliminar este préstamo?</div>
+
+<partial name="_ResumenPrestamo" model="Model" />
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Confirmar eliminación</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

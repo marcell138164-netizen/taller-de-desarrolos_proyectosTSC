@@ -1,0 +1,11 @@
+@model prueba2_Martinantinao.Models.PrestamoEquipo
+
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Solicitante</h5>
+        <p><strong>Equipo:</strong> @Model.Equipo</p>
+        <p><strong>Fecha:</strong> @Model.FechaPrestamo.ToString("dd/MM/yyyy")</p>
+        <p><strong>Días:</strong> @Model.Dias</p>
+        <p><strong>Estado:</strong> @(Model.Devuelto ? "Devuelto" : "Pendiente")</p>
+    </div>
+</div>
